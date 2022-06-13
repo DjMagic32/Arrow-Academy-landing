@@ -7,6 +7,7 @@ import Collapse from "./components/collapse.jsx";
 import copys from "./components/copys/copys.js";
 import { saveProduct } from "./services/index.js";
 import image1 from "./images/carousel/1.jpg"
+import NavbarLogo from "./components/navbarOnlyLogo.jsx";
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
     <ContainerApp 
       className="App"
     >
-      <Navbar />
+      <NavbarLogo />
       <SectionHeader>
       <HeaderApp />
       </SectionHeader>
