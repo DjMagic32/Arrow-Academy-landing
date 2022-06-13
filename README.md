@@ -1,3 +1,17 @@
+# Install the following dependencies
+
+## styled-components": "^5.3.5"
+
+## react-bulma-components": "^4.1.0"
+
+## react-background-slider": "^2.0.0"
+
+## react-animated-bg": "^1.2.2"
+
+## hamburger-react": "^2.5.0"
+
+## axios": "^0.27.2"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
