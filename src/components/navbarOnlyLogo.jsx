@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import { Sling as Hamburger } from "hamburger-react"
 import ArrowAcademyLogo from "../images/logo/logo_arrow_academy.png"
-import { useState } from "react";
 
 const NavbarLogo = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
 
     return(
         <NavbarApp>
@@ -24,8 +20,6 @@ const NavbarApp = styled.nav`
     align-items: center;
     flex-wrap: wrap;
     background-color: #e6e3ea;
-    
-
 `;
 
 const LogoLink = styled.a``;
