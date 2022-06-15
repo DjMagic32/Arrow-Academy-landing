@@ -115,8 +115,13 @@ box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
         -webkit-transform: translate(0, -5px);
         transform: translate(0, -5px);
     }
+@media (max-width: 768px){
+    height: auto;
+    }
+`;
 
-`; 
+
+
 
 
 export default Item;
