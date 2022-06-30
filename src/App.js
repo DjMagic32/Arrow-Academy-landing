@@ -1,30 +1,22 @@
 import styled from "styled-components";
 import Footer from "./components/footer.jsx";
-import Navbar from "./components/navbar.jsx";
-import HeaderApp from "./components/header.jsx";
 import CardApp from "./components/card.jsx";
 import Collapse from "./components/collapse.jsx";
 import copys from "./components/copys/copys.js";
-import { saveProduct } from "./services/index.js";
 import image1 from "./images/carousel/1.jpg"
 import NavbarLogo from "./components/navbarOnlyLogo.jsx";
+import SectionValorations from "./components/sectionValorations.jsx";
+import BgSliderMain from "./components/bgSliderSction.jsx";
 
 
 function App() {
-
-  const handleSumit = (data) => {
-    saveProduct(data);
-
-  };
 
   return (
     <ContainerApp 
       className="App"
     >
       <NavbarLogo />
-      <SectionHeader>
-      <HeaderApp />
-      </SectionHeader>
+      <BgSliderMain/>
       
       <SectionCard>
       <TextCardSection>
@@ -52,6 +44,8 @@ function App() {
         <Collapse clase={copys.clase3} content={copys.content_clas3}/>
         <Collapse clase={copys.clase4} content={copys.content_clas4}/>
       </SectionCollapses>
+
+      <SectionValorations />
       <Footer />
 
       
@@ -69,8 +63,7 @@ const SectionCard = styled.section`
   flex-direction: column;
   width: 100%;
   height: auto;
-  margin-top: 0px;
-  padding-top: 0px;
+  padding: 40px 10px;
 
 `;
 
@@ -83,7 +76,7 @@ const TextCardSection = styled.div`
   margin-top: auto;
   color: #2e1a4d;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 18px;
   padding: 0;
 `;
 
@@ -92,18 +85,6 @@ const CardDiv = styled.div`
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-
-`;
-
-const SectionForm = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 500px;
-  background-color: #e6e3ea;
-  padding-top: 25px;
 
 `;
 

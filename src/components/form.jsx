@@ -1,27 +1,56 @@
 import React, { useState } from "react";
 import { Form } from 'react-bulma-components';
 import styled from "styled-components";
+import axios from "axios";
 
 const { Input, Field, Control, Label } = Form;
 
-const FormApp = ({ handleSumit }) => {
+const FormApp = () => {
     const [formValues , setFormValues] = useState({
-        firstname: "",
-        lastname: "",
+        first_name: "",
+        last_name: "",
         mail: "",
         phone: "",
+        group: "",
+        course: "",
+        user: "",
+
 
     });
+
+    const handleSubmit = async() => {
+        // store the states in the form data
+        const loginFormData = new FormData();
+        loginFormData.append("first_name", formValues.first_name)
+        loginFormData.append("last_name", formValues.last_name)
+        loginFormData.append("mail", formValues.mail)
+        loginFormData.append("phone", formValues.phone)
+        loginFormData.append("group", formValues.group)
+        loginFormData.append("course", formValues.course)
+        loginFormData.append("user", formValues.user)
+      
+        try {
+          // make axios post request
+          const response = await axios({
+            method: "post",
+            url: "http://localhost:8000/user-app/v1/students/",
+            data: loginFormData,
+            headers: { "Content-Type": "multipart/form-data" },
+          });
+        } catch(error) {
+          console.log(error.response.data)
+        }
+      }
 
     const handleChange = (e) => {
         const { name, value } = e.target
         /* console.log(name,value) */
         setFormValues({ ...formValues, [name]:value })
     };
-
+      
     const handleSubmitForm = (event) => {
-        event.preventDefault();
-        handleSumit({ ...formValues, });
+        //event.preventDefault();
+        handleSubmit({ ...formValues, });
         console.log(formValues);
     };
 
@@ -32,8 +61,8 @@ const FormApp = ({ handleSumit }) => {
                 <Control className="control-form">
                     <Input 
                         placeholder="Introduce tu nombre"
-                        name="firstname"
-                        value={formValues.firstname}
+                        name="first_name"
+                        value={formValues.first_name}
                         onChange={handleChange}
                         className="input-form"
                     />
@@ -44,8 +73,8 @@ const FormApp = ({ handleSumit }) => {
                 <Control className="control-form">
                     <Input 
                         placeholder="Introduce tu apellido"
-                        name="lastname"
-                        value={formValues.lastname}
+                        name="last_name"
+                        value={formValues.last_name}
                         onChange={handleChange}
                         className="input-form"
                     />

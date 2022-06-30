@@ -29,8 +29,8 @@ const ContainerCard = styled.div`
 `;
 
 const Card = styled.div`
-    width: 250px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,7 +40,7 @@ const Card = styled.div`
     -webkit-transition: all 0.2s ease 0s;
     -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
     box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
-    border: none;
+    border: 0.5px solid #d4cfcc;
     border-top: 4px solid transparent;
     border-radius: 1rem;
 
@@ -60,6 +60,7 @@ const TitleCardContainer = styled.div`
     padding: 0;
     font: inherit;
     vertical-align: baseline;
+    text-align: center;
 `;
 
 const TextTitle = styled.span`
