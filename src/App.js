@@ -3,7 +3,6 @@ import Footer from "./components/footer.jsx";
 import CardApp from "./components/card.jsx";
 import Collapse from "./components/collapse.jsx";
 import copys from "./components/copys/copys.js";
-import { saveProduct } from "./services/index.js";
 import image1 from "./images/carousel/1.jpg"
 import NavbarLogo from "./components/navbarOnlyLogo.jsx";
 import SectionValorations from "./components/sectionValorations.jsx";
@@ -11,11 +10,6 @@ import BgSliderMain from "./components/bgSliderSction.jsx";
 
 
 function App() {
-
-  const handleSumit = (data) => {
-    saveProduct(data);
-
-  };
 
   return (
     <ContainerApp 
